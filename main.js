@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let randomNumber = Math.floor(Math.random() * squares.length);
         if(squares[randomNumber].innerHTML == 0) {
             squares[randomNumber].innerHTML = 2;
-            checkForGameOver();
+            // checkForGameOver();
         } else generate();
     }
 
@@ -151,13 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // assign keycodes
     function control(e) {
-        if(e.keyCode == 39) {
-            keyRight()
-        } else if (e.keyCode == 37) {
+        if(e.keyCode == 97) {
             keyLeft();
-        } else if (e.keyCode == 38) {
+        } else if (e.keyCode == 98) {
+            keyRight();
+        } else if (e.keyCode == 99) {
             keyUp();
-        } else if (e.keyCode == 40) {
+        } else if (e.keyCode == 100) {
             keyDown();
         }
     }
